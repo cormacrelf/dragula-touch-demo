@@ -24,14 +24,14 @@ import autoScroll from 'dom-autoscroller';
     </p>
 
     <div class="parent" [dragula]="'bag'">
-      <div [class.colours]="colours" class="child" >normal</div>
-      <div [class.colours]="colours" class="child tm" (touchmove)="touchmove()" >normal with touchmove handler</div>
       <div [class.colours]="colours" class="child ddl" delayDrag >1 delayDrag</div>
       <div [class.colours]="colours" class="child ddl" delayDrag >2 delayDrag</div>
       <div [class.colours]="colours" class="child ddl" delayDrag >3 delayDrag</div>
       <div [class.colours]="colours" class="child ddl" delayDrag >4 delayDrag</div>
       <div [class.colours]="colours" class="child ddl" delayDrag >5 delayDrag</div>
       <div [class.colours]="colours" class="child ddl" delayDrag >6 delayDrag</div>
+      <div [class.colours]="colours" class="child" >normal</div>
+      <div [class.colours]="colours" class="child tm" (touchmove)="touchmove()" >normal with touchmove handler</div>
     </div>
   `,
   styles: [`
@@ -88,6 +88,7 @@ import autoScroll from 'dom-autoscroller';
 export class AppComponent implements OnInit, OnDestroy {
 
   colours = true;
+  scroll: any;
 
   constructor(private ds: DragulaService) {
   }
@@ -97,7 +98,7 @@ export class AppComponent implements OnInit, OnDestroy {
     let drake = dragula();
     this.ds.add('bag', drake);
 
-    var scroll = autoScroll(
+    this.scroll = autoScroll(
       // can also be an array of elements if they're { overflow: auto; max-height: XXpx } containers.
       // i.e. [someViewChild.nativeElement]
       window,
@@ -119,5 +120,6 @@ export class AppComponent implements OnInit, OnDestroy {
 
   ngOnDestroy() {
     this.ds.destroy('bag');
+    this.scroll.destroy();
   }
 }
