@@ -8,7 +8,6 @@ export class DelayDragDirective {
   public dragDelay: number;
 
   private touchTimeout: any;
-  private originalBackground: string;
 
   @HostBinding('class.delay-drag-lifted')
   private draggable: boolean = false;
