@@ -54,11 +54,11 @@ import autoScroll from 'dom-autoscroller';
      * - equivalent to any press longer than delayDrag's delay on touchscreens
      * this is probably the most useful rule here */
     .gu-mirror.child, .delay-drag-lifted.child:not(.gu-transit) {
-      /* nice big box-shadow. may have a performance impact when dragging in some browser, try before you buy. */
-      box-shadow: 0 14px 28px rgba(0,0,0,0.18), 0 10px 10px rgba(0,0,0,0.15);
-
       /* zoom an element when you 'pick it up' */
-      /* transform: scale(1.1); */
+      transform: scale(1.1);
+
+      /* nice big box-shadow. may have a performance impact when dragging in some browser, try before you buy. */
+      /* box-shadow: 0 14px 28px rgba(0,0,0,0.18), 0 10px 10px rgba(0,0,0,0.15); */
 
       /* you'd probably want to delete the original opacity filters in .gu-mirror rather than do this */
       /* opacity: 1; */

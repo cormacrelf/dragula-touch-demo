@@ -1,5 +1,7 @@
 # Dragula Touch Demo
 
+**[demo](https://dist-qipwlhpznt.now.sh/)**
+
 A working example of using [dragula](https://github.com/bevacqua/dragula) on a touchscreen! Includes:
 
 * [`DelayDragDirective`](https://github.com/cormacrelf/dragula-touch-demo/blob/master/src/app/delay-drag.directive.ts):
