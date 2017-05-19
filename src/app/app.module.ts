@@ -5,7 +5,7 @@ import { HttpModule } from '@angular/http';
 
 import { AppComponent } from './app.component';
 import { DragulaModule } from 'ng2-dragula';
-import { DelayDragDirective } from "./dragdelaylift.directive";
+import { DelayDragDirective } from "./delay-drag.directive";
 
 @NgModule({
   declarations: [
