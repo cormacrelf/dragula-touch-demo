@@ -1,10 +1,8 @@
 import { Directive, ElementRef, HostListener, Input, OnInit, HostBinding } from '@angular/core';
 
-const ALIAS = 'delayDrag';
-
-@Directive({ selector: `[${ALIAS}]` })
+@Directive({ selector: `[delayDrag]` })
 export class DelayDragDirective {
-  @Input(ALIAS)
+  @Input('delayDrag')
   public dragDelay: number;
 
   private touchTimeout: any;
