@@ -1,6 +1,10 @@
+# WARNING
+
+**This code hasn't been updated to `ng2-dragula` version 2. Please follow the [migration guide](https://github.com/valor-software/ng2-dragula/tree/master/MIGRATION-v2.md) if you are blindly copying this into a project. Or, help out by submitting a PR that updates this to v2.**
+
 # Dragula Touch Demo
 
-**[demo](https://dist-qipwlhpznt.now.sh/)**
+**[demo here](https://dist-qipwlhpznt.now.sh/)**
 
 A working example of using [dragula](https://github.com/bevacqua/dragula) on a touchscreen! Includes:
 
