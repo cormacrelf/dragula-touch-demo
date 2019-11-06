@@ -24,10 +24,7 @@ export class DelayDragDirective {
 
   @HostListener('touchmove', ['$event'])
   private onTouchMove(evt: Event): void {
-    if (!this.draggable) {
-      evt.stopPropagation();
-      clearTimeout(this.touchTimeout);
-    }
+    if (!this.draggable) { evt.stopPropagation(); clearTimeout(this.touchTimeout); }
   }
 
   @HostListener('touchend', ['$event'])
