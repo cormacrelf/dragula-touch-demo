@@ -19,9 +19,7 @@ export class DelayDragDirective {
 
   @HostListener('touchstart', ['$event'])
   private onTouchStart(evt: Event): void {
-    this.touchTimeout = setTimeout(() => {
-      this.draggable = true;
-    }, this.delay);
+    this.touchTimeout = setTimeout(() => { this.draggable = true; }, this.delay);
   }
 
   @HostListener('touchmove', ['$event'])
