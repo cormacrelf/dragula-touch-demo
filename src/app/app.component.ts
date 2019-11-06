@@ -103,9 +103,7 @@ export class AppComponent implements OnInit, OnDestroy {
       // i.e. [someViewChild.nativeElement]
       window,
       {
-        margin: 30,
-        maxSpeed: 25,
-        scrollWhenOutside: true,
+        margin: 30, maxSpeed: 25, scrollWhenOutside: true,
           
         autoScroll: function () { // don't use () => {} syntax, we want to keep the 'this'
           // Only scroll when the pointer is down, and there is a child being dragged. 
